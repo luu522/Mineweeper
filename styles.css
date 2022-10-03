@@ -1,0 +1,62 @@
+:root{                             /* creation of global variables to create the default board*/
+    --num-columnas: 8;          
+    --num-filas: 8;
+    --size: 50px;
+    background-color: #EEEEEE;
+}
+
+h1{
+    text-align: center;
+    color: #393E46;
+}
+
+.tablero{
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    display:grid;
+    /* depending on the number that is set in the global variables it creates the number of columns and rows needed with the size already defined*/
+    grid-template-columns: repeat(var(--num-columnas), var(--size));
+    grid-template-rows: repeat(var(--num-filas), var(--size));
+}
+
+.tablero div{
+    background-color: #BBBBBB;
+    border-left: 2px solid #D3D3D3;
+    border-top: 2px solid #D3D3D3;
+    border-right: 2px solid #A9A9A9;
+    border-bottom: 2px solid #A9A9A9;
+    text-align: center;
+}
+
+.counters{
+    background-color: #BBBBBB;
+    border-left: 2px solid #D3D3D3;
+    border-top: 2px solid #D3D3D3;
+    border-right: 2px solid #A9A9A9;
+    border-bottom: 2px solid #A9A9A9;
+    margin-left: 42.1%;
+    margin-right: 42.1%;
+    height: 50px;
+    font-weight: bolder;
+}
+
+.numberOfFlags{
+    font-size: 40px;
+    height: 50px;
+    font-weight: bolder;
+    margin-left: 50px;
+    color: #FF6666;
+}
+
+.timeCounter{
+    font-size: 40px;
+    height: 50px;
+    font-weight: bolder;
+    margin-left: 200px;
+    color: #FF6666;
+}
+
+.tablero div:hover{
+    background-color: #A9A9A9;
+}
